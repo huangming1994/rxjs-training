@@ -1,0 +1,22 @@
+{
+  "name": "rxjs-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangming1994/rxjs-training.git"
+  },
+  "author": "Super",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huangming1994/rxjs-training/issues"
+  },
+  "homepage": "https://github.com/huangming1994/rxjs-training#readme",
+  "dependencies": {
+    "rx": "^4.1.0"
+  }
+}
