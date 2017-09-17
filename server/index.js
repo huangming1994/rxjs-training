@@ -1,19 +1,20 @@
-const express = require('express')
-const fs = require('fs')
-const path = require('path')
-const app = express()
+const webpack = require("webpack");
+const webpackDevServer = require("webpack-dev-server");
+const webpackCfg = require("../webpack.config.js");
 
-app.get('*', function(req, res){
-  const pth = path.resolve(process.cwd())
-  fs.readFile(path.join(pth, 'index.html'), (err, file) => {
-    if (err) {
-      res.sendStatus(404);
-    } else {
-      res.send(file.toString());
-    }
-  })
-})
+const compiler = webpack(webpackCfg);
 
-app.listen(8000, function(){
-  console.log('app is listening on port 8000')
-})
+//init server
+const app = new webpackDevServer(compiler, {
+  //注意此处publicPath必填
+  publicPath: webpackCfg.output.publicPath,
+  hot: true,
+});
+
+app.listen(8081, "localhost", function (err) {
+  if (err) {
+    console.log(err);
+  }
+});
+
+console.log("listen at http://localhost:8081");

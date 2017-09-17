@@ -21,6 +21,9 @@
     "rx": "^4.1.0"
   },
   "devDependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "open-browser-webpack-plugin": "0.0.5",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.2"
   }
 }
