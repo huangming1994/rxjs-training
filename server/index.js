@@ -15,6 +15,4 @@ app.listen(8081, "localhost", function (err) {
   if (err) {
     console.log(err);
   }
-});
-
-console.log("listen at http://localhost:8081");
+})
